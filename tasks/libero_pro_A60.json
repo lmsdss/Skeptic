@@ -1,0 +1,362 @@
+[
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 0,
+    "task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 1,
+    "task_name": "pick_up_the_cream_cheese_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 2,
+    "task_name": "pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 3,
+    "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 4,
+    "task_name": "pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 5,
+    "task_name": "pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 6,
+    "task_name": "pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 7,
+    "task_name": "pick_up_the_milk_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 8,
+    "task_name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_swap",
+    "task_id": 9,
+    "task_name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 0,
+    "task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 1,
+    "task_name": "pick_up_the_cream_cheese_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 2,
+    "task_name": "pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 3,
+    "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 4,
+    "task_name": "pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 5,
+    "task_name": "pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 6,
+    "task_name": "pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 7,
+    "task_name": "pick_up_the_milk_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 8,
+    "task_name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_object_task",
+    "task_id": 9,
+    "task_name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 0,
+    "task_name": "open_the_middle_drawer_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 1,
+    "task_name": "put_the_bowl_on_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 2,
+    "task_name": "put_the_wine_bottle_on_top_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 3,
+    "task_name": "open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 4,
+    "task_name": "put_the_bowl_on_top_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 5,
+    "task_name": "push_the_plate_to_the_front_of_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 6,
+    "task_name": "put_the_cream_cheese_in_the_bowl"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 7,
+    "task_name": "turn_on_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 8,
+    "task_name": "put_the_bowl_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_swap",
+    "task_id": 9,
+    "task_name": "put_the_wine_bottle_on_the_rack"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 0,
+    "task_name": "open_the_middle_drawer_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 1,
+    "task_name": "put_the_bowl_on_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 2,
+    "task_name": "put_the_wine_bottle_on_top_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 3,
+    "task_name": "open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 4,
+    "task_name": "put_the_bowl_on_top_of_the_cabinet"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 5,
+    "task_name": "push_the_plate_to_the_front_of_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 6,
+    "task_name": "put_the_cream_cheese_in_the_bowl"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 7,
+    "task_name": "turn_on_the_stove"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 8,
+    "task_name": "put_the_bowl_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_goal_task",
+    "task_id": 9,
+    "task_name": "put_the_wine_bottle_on_the_rack"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 0,
+    "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 1,
+    "task_name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 2,
+    "task_name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 3,
+    "task_name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 4,
+    "task_name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 5,
+    "task_name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 6,
+    "task_name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 7,
+    "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 8,
+    "task_name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_swap",
+    "task_id": 9,
+    "task_name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 0,
+    "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 1,
+    "task_name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 2,
+    "task_name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 3,
+    "task_name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 4,
+    "task_name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 5,
+    "task_name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 6,
+    "task_name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 7,
+    "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 8,
+    "task_name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  {
+    "benchmark": "libero-pro",
+    "suite": "libero_spatial_task",
+    "task_id": 9,
+    "task_name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+  }
+]

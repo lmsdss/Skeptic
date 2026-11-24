@@ -1,0 +1,111 @@
+#!/usr/bin/env -S python3 -I
+# Isolated sandbox: cap-harness forwarder (the real one runs outside this sandbox).
+# Mounted over .venv-libero/bin/cap-harness by launch/sandbox.sh when isolation is on. It hands argv, the working
+# directory, the GPU variables and its own pid to launch/simd.py (outside the sandbox), streams the run's stdout and
+# stderr back and exits with its exit code. Killing this process kills the run.
+import json
+import os
+import signal
+import sys
+import time
+import uuid
+
+ENV_KEYS = ("CUDA_VISIBLE_DEVICES", "MUJOCO_EGL_DEVICE_ID", "CAP_HARNESS_LOG_LEVEL", "PYTHONUNBUFFERED",
+            "OMP_NUM_THREADS", "MKL_NUM_THREADS")
+
+
+def fail(msg, rc=3):
+    sys.stderr.write(f"cap-harness (isolated sandbox): {msg}\n")
+    sys.exit(rc)
+
+
+spool = os.environ.get("STUDY_SIM_SPOOL", "")
+if not spool or not os.path.isdir(spool):
+    fail("the simulation service is not available (STUDY_SIM_SPOOL unset or missing)")
+
+
+def service_alive(limit=30):
+    try:
+        return time.time() - float(open(os.path.join(spool, "alive")).read().strip()) < limit
+    except (OSError, ValueError):
+        return False
+
+
+# The service writes its heartbeat every 2 s from its request loop. A file-system stall can hold that loop for tens of
+# seconds (36 s and 46 s were observed, which made every waiting forwarder give up at once and so killed every running
+# episode), so wait for the heartbeat instead of failing on the first stale read.
+_deadline = time.time() + 180
+while not service_alive():
+    if time.time() > _deadline:
+        fail("the simulation service is not running")
+    time.sleep(1)
+
+rid = f"{time.strftime('%Y%m%dT%H%M%S')}-{os.getpid()}-{uuid.uuid4().hex[:6]}"
+rundir = os.path.join(spool, "run", rid)
+req = {"id": rid, "argv": sys.argv[1:], "cwd": os.getcwd(), "pid": os.getpid(),
+       "env": {k: os.environ[k] for k in ENV_KEYS if k in os.environ}}
+tmp = os.path.join(spool, "req", f".{rid}.tmp")
+with open(tmp, "w") as fh:
+    json.dump(req, fh)
+os.replace(tmp, os.path.join(spool, "req", f"{rid}.json"))
+
+killed = []
+
+
+def on_signal(signum, _frame):
+    killed.append(signum)
+    try:
+        os.makedirs(rundir, exist_ok=True)
+        open(os.path.join(rundir, "kill"), "w").close()
+    except OSError:
+        pass
+
+
+for s in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
+    signal.signal(s, on_signal)
+
+streams = {"out": [sys.stdout.buffer, None, 0], "err": [sys.stderr.buffer, None, 0]}
+
+
+def pump():
+    moved = False
+    for name, st in streams.items():
+        if st[1] is None:
+            try:
+                st[1] = open(os.path.join(rundir, name), "rb")
+            except OSError:
+                continue
+        data = st[1].read()
+        if data:
+            moved = True
+            try:
+                st[0].write(data)
+                st[0].flush()
+            except (BrokenPipeError, OSError):
+                pass
+    return moved
+
+
+rc_path = os.path.join(rundir, "rc")
+t_kill = None
+while True:
+    moved = pump()
+    if os.path.exists(rc_path):
+        time.sleep(0.2)
+        while pump():
+            pass
+        try:
+            rc = int(open(rc_path).read().strip() or "1")
+        except (OSError, ValueError):
+            rc = 1
+        if killed:
+            sys.exit(128 + killed[0])
+        sys.exit(rc if 0 <= rc < 256 else 1)
+    if killed:
+        t_kill = t_kill or time.time()
+        if time.time() - t_kill > 20:
+            sys.exit(128 + killed[0])
+    elif not service_alive(900):
+        fail("the simulation service stopped during the run (no heartbeat for 15 min)", 3)
+    if not moved:
+        time.sleep(0.2)

@@ -1,0 +1,19 @@
+#!/bin/bash
+# cap-harness with the automatic observation timeline. launch/sandbox.sh mounts this file read-only over the
+# workspace's .venv-libero/bin/cap-harness, so every session of this arm gets it. It runs the real CLI
+# unchanged; after `run` or `run-batch` into a development or probe output root (never validation or held-out), it
+# writes obs_timeline.md into every failed development run the command produced and prints one line per failed seed
+# (campaign/gate/obs_timeline.py). The command's own exit status is kept.
+REPO=$(cd "$(dirname "$0")/../.." && pwd -P)
+PY=$REPO/.venv-libero/bin/python3
+START=$(date +%s)
+"$PY" -c 'import sys; from cap_harness.cli import main; sys.argv[0] = "cap-harness"; sys.exit(main())' "$@"
+rc=$?
+case "${1:-}" in
+  run|run-batch)
+    LEFT=$((570 - $(date +%s) + START)); [ "$LEFT" -lt 30 ] && LEFT=30   # stay inside a 10-minute tool call
+    OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 timeout "$LEFT" \
+      "$PY" -I "$REPO/campaign/gate/obs_timeline.py" after-cli --since "$START" -- "$@" \
+      || echo "[observation timeline] not written (exit $?)" ;;
+esac
+exit $rc

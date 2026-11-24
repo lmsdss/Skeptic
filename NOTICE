@@ -1,0 +1,26 @@
+Skeptic
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The agents' workspace is the open-source ASPIRE v1.0 code base (https://github.com/NVlabs/ASPIRE, commit fa00f0e),
+which launch/setup.sh fetches; it is not part of this repository. The following files of this repository are
+modified copies of files from ASPIRE, which is licensed under the Apache License, Version 2.0:
+
+  skeptic/overlay/artifacts.py        from src/cap_harness/artifacts.py: also stores an agentview depth image with
+                                      each keyframe
+  skeptic/overlay/subagent-prompt.md  from .claude/skills/iterative-debugging/subagent-prompt.md: one added entry
+                                      on the observation timeline
+
+launch/qwen_chat_template.jinja is a modified copy of the served model's chat template (see the model card for its
+license): it maps the effort levels the agent runtime may send onto the levels the template accepts.
+
+ASPIRE's NOTICE:
+
+  ASPIRE
+
+  Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+  This product includes software developed by NVIDIA Corporation and the ASPIRE
+  contributors. Third-party components are Git submodules under third_party/ and
+  are fetched under their own licences; see configs/dependency-lock.json for the
+  pinned sources.

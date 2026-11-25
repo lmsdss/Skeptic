@@ -1,5 +1,7 @@
 # Skeptic
 
+[![Project Page](docs/assets/badge-project.svg)](https://lmsdss.github.io/Skeptic/)
+
 Skeptic grounds an LLM agent's failure diagnosis in measured evidence, and it lets knowledge into the agent's
 skill library only after that knowledge has been verified. This repository holds the code for the paper's
 LIBERO-Pro study:

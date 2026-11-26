@@ -5,15 +5,15 @@
 
 Skeptic is a training-free protocol for robot skill discovery. It diagnoses failures using measured action outcomes and admits a skill only when its source program meets a development-success threshold and an independent verifier reproduces the repair.
 
-## Drawer rollout
+## Video
 
 <p align="center">
-  <a href="https://wenfangsun.cn/Skeptic/#cases">
-    <img src="docs/assets/drawer-comparison.gif" width="768" alt="Two rollouts on tasks that share a drawer. ASPIRE misses the handle and leaves the drawer closed. Skeptic adjusts its grasp, opens the drawer, and places the cream cheese inside.">
+  <a href="https://wenfangsun.cn/data/skeptic-promo.mp4">
+    <img src="docs/assets/video-cover.jpg" width="768" alt="Play the one-minute Skeptic video. Opening frame: an agent claimed the drawer hit a mechanical stop, while the measured gripper width shows the jaws closed on nothing.">
   </a>
 </p>
 
-With ASPIRE, a missed grasp leads to a diagnosis of a mechanical stop. Skeptic’s event log records that the gripper closed on air, giving the agent evidence to change its grasp. [Explore the interactive rollouts](https://wenfangsun.cn/Skeptic/#cases)
+A one-minute overview: three tasks where ASPIRE gives up and Skeptic succeeds, the two components, and the results. [Explore the interactive rollouts](https://wenfangsun.cn/Skeptic/#cases)
 
 ## Method and results
 

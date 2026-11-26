@@ -1,13 +1,34 @@
-# Skeptic
+# Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery
 
 [![Paper](docs/assets/badge-paper.svg)](https://arxiv.org/abs/2611.33560)
-[![Project Page](docs/assets/badge-project.svg)](https://lmsdss.github.io/Skeptic/)
+[![Project Page](docs/assets/badge-project.svg)](https://wenfangsun.cn/Skeptic/)
 
-Skeptic grounds an LLM agent's failure diagnosis in measured evidence, and it lets knowledge into the agent's
-skill library only after that knowledge has been verified. This repository holds the code for the paper's
-LIBERO-Pro study:
-- all 80 tasks: Object, Goal, Spatial and Long, each with position (`*_swap`) and task (`*_task`) perturbations;
-- one open-weight model, served locally by vLLM, as coordinator, workers and verifiers.
+Skeptic is a training-free protocol for robot skill discovery. It diagnoses failures using measured action outcomes and admits a skill only when its source program meets a development-success threshold and an independent verifier reproduces the repair.
+
+## Drawer rollout
+
+<p align="center">
+  <a href="https://wenfangsun.cn/Skeptic/#cases">
+    <img src="docs/assets/drawer-comparison.gif" width="768" alt="Two rollouts on tasks that share a drawer. ASPIRE misses the handle and leaves the drawer closed. Skeptic adjusts its grasp, opens the drawer, and places the cream cheese inside.">
+  </a>
+</p>
+
+With ASPIRE, a missed grasp leads to a diagnosis of a mechanical stop. Skeptic’s event log records that the gripper closed on air, giving the agent evidence to change its grasp. [Explore the interactive rollouts](https://wenfangsun.cn/Skeptic/#cases)
+
+## Method and results
+
+<p align="center">
+  <a href="https://wenfangsun.cn/Skeptic/#method">
+    <img src="docs/assets/method.png" width="768" alt="Skeptic’s method. A grounded event log records action effects to guide repair. A proposed skill is added only when its source program succeeds on at least 8 of 15 development seeds and an independent verifier reproduces the repair.">
+  </a>
+</p>
+
+On **80 LIBERO-Pro tasks**, held-out success rose from **63.4% to 78.3%** with the same frozen model and program revision budget. Across **60 audited tasks**, the mean number of tasks with a false impossibility judgment fell from **19.5 to 8.5 per campaign**. [See the results breakdown](https://wenfangsun.cn/Skeptic/#results)
+
+## What this repository covers
+
+- All 80 LIBERO-Pro tasks across Object, Goal, Spatial, and Long, each with position (`*_swap`) and task (`*_task`) perturbations.
+- One open-weight model, served locally by vLLM, for the coordinator, workers, and verifiers.
 
 ## Components
 

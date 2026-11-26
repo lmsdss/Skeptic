@@ -97,6 +97,7 @@ section[id] { scroll-margin-top: 92px; }
 .paper-title { margin-top: 18px; font-size: clamp(1.05rem, 2.2vw, 1.4rem); font-weight: 600; letter-spacing: -.02em; color: var(--accent-deep); text-wrap: balance; }
 .authors { margin-top: 24px; font-size: 1.03rem; font-weight: 550; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 22px; }
 .authors span { white-space: nowrap; }
+.authors a { text-decoration: underline; text-underline-offset: 4px; }
 .authors sup, .affiliation sup { color: var(--muted); font-size: .68em; font-weight: 500; margin-inline: 1px; line-height: 0; }
 .affiliation { color: var(--muted); font-size: .9rem; margin-top: 6px; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 20px; }
 .hero-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 26px 0 30px; }
@@ -383,8 +384,13 @@ footer.container { display: flex; flex-wrap: wrap; align-items: center; justify-
     <section class="hero" aria-labelledby="title">
       <h1 id="title">Skeptic</h1>
       <p class="paper-title">Grounding Failure Diagnosis for Robot Skill Discovery</p>
-      <!-- EDIT: authors and affiliations -->
-      <p class="authors"><span>Wenfang Sun<sup>1</sup></span><span>Jianghao Deng<sup>2</sup></span><span>Wenzhe Yin<sup>1</sup></span><span>Yingjun Du<sup>1</sup></span><span>Cees G. M. Snoek<sup>1</sup></span></p>
+      <p class="authors">
+        <span><a href="https://wenfangsun.cn/">Wenfang Sun</a><sup>1</sup></span>
+        <span>Jianghao Deng<sup>2</sup></span>
+        <span><a href="https://ywzcode.github.io/">Wenzhe Yin</a><sup>1</sup></span>
+        <span><a href="https://yingjundu.github.io/">Yingjun Du</a><sup>1</sup></span>
+        <span><a href="https://www.ceessnoek.info/">Cees G. M. Snoek</a><sup>1</sup></span>
+      </p>
       <p class="affiliation"><span><sup>1</sup>University of Amsterdam</span><span><sup>2</sup>South China Normal University</span></p>
       <div class="hero-actions">
         <a class="button" href="https://arxiv.org/pdf/2611.33560"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3h8l4 4v14H6V3Z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper</a>

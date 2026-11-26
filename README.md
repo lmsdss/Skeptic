@@ -1,8 +1,7 @@
 # Skeptic
 
+[![Paper](docs/assets/badge-paper.svg)](https://arxiv.org/abs/2611.33560)
 [![Project Page](docs/assets/badge-project.svg)](https://lmsdss.github.io/Skeptic/)
-
-[Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery](https://arxiv.org/pdf/2611.33560) ([arXiv:2611.33560](https://arxiv.org/abs/2611.33560))
 
 Skeptic grounds an LLM agent's failure diagnosis in measured evidence, and it lets knowledge into the agent's
 skill library only after that knowledge has been verified. This repository holds the code for the paper's

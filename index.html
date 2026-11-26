@@ -104,7 +104,6 @@ section[id] { scroll-margin-top: 92px; }
 .button:hover { transform: translateY(-2px); text-decoration: none; box-shadow: var(--lift); }
 .button.primary { background: #7652A3; border-color: #7652A3; color: #fff; }
 .button.quiet { border-color: transparent; color: var(--accent); background: var(--chip); }
-.button[aria-disabled="true"] { color: var(--faint); border-style: dashed; background: transparent; pointer-events: none; }
 .button svg { width: 18px; height: 18px; }
 
 /* hero ticker: a claim, struck out by a measurement */
@@ -387,9 +386,8 @@ footer.container { display: flex; flex-wrap: wrap; align-items: center; justify-
       <!-- EDIT: authors and affiliations -->
       <p class="authors"><span>Wenfang Sun<sup>1</sup></span><span>Jianghao Deng<sup>2</sup></span><span>Wenzhe Yin<sup>1</sup></span><span>Yingjun Du<sup>1</sup></span><span>Cees G. M. Snoek<sup>1</sup></span></p>
       <p class="affiliation"><span><sup>1</sup>University of Amsterdam</span><span><sup>2</sup>South China Normal University</span></p>
-      <!-- EDIT: give the Paper button an href and remove aria-disabled when the preprint is out -->
       <div class="hero-actions">
-        <a class="button" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3h8l4 4v14H6V3Z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper (soon)</a>
+        <a class="button" href="https://arxiv.org/pdf/2611.33560"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3h8l4 4v14H6V3Z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper</a>
         <a class="button primary" href="https://github.com/lmsdss/Skeptic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 8 5 12l4 4 M15 8l4 4-4 4"/></svg>Code</a>
         <a class="button quiet" href="#cases">Watch rollouts</a>
       </div>
@@ -632,16 +630,16 @@ footer.container { display: flex; flex-wrap: wrap; align-items: center; justify-
   <section id="citation" class="band">
     <div class="container band-grid">
       <div><h2>Citation</h2></div>
-      <!-- EDIT: venue and year -->
       <div class="citation-code">
         <button type="button" id="bib-copy">Copy BibTeX</button>
-<pre id="bib-text">@article{sun2026skeptic,
-  title  = {Skeptic: Grounding Failure Diagnosis
-            for Robot Skill Discovery},
-  author = {Sun, Wenfang and Deng, Jianghao
-            and Yin, Wenzhe and Du, Yingjun
-            and Snoek, Cees G. M.},
-  year   = {2026}
+<pre id="bib-text">@misc{sun2026skeptic,
+  title         = {Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery},
+  author        = {Sun, Wenfang and Deng, Jianghao and Yin, Wenzhe and Du, Yingjun and Snoek, Cees G. M.},
+  year          = {2026},
+  eprint        = {2611.33560},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2611.33560}
 }</pre>
       </div>
     </div>
